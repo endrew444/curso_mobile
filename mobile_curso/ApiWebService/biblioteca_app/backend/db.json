@@ -26,6 +26,13 @@
         }
     ],
     "emprestimos":[
-        
+        {
+            "id":1,
+            "usuario_id": 1,
+            "livro_id": 1,
+            "data_emprestimo":"2025-08-22",
+            "data_devolucao":"2025-09-01",
+            "devolvido":false
+        }
     ]
 }
