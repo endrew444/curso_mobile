@@ -1,0 +1,19 @@
+{
+    "usuarios":[
+        {
+            "id":1,
+            "nome": "João Silva",
+            "email": "joaosilva@email.com",
+        },
+        {
+            "id":2,
+            "nome": "Maria Oliveira",
+            "email": "maria2@email.com"
+    ],
+    "livros":[
+        {
+            
+        }
+    ],
+    "emprestimos":[]
+}
