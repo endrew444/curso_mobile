@@ -3,17 +3,29 @@
         {
             "id":1,
             "nome": "João Silva",
-            "email": "joaosilva@email.com",
+            "email":"joao@email.com"
         },
         {
-            "id":2,
-            "nome": "Maria Oliveira",
-            "email": "maria2@email.com"
+            "id": 2,
+            "nome":"Maria Santos",
+            "email": "maira@email.com"
+        }
     ],
     "livros":[
         {
-            
+            "id":1,
+            "titulo":"Guia dos Mochileiros da Galáxia",
+            "autor":"Douglas Noel Adans",
+            "disponivel":false
+        },
+        {
+            "id":2,
+            "titulo": "Memórias Póstumas de Brás Cubas",
+            "autor": "Machado de Assis",
+            "disponivel":true
         }
     ],
-    "emprestimos":[]
+    "emprestimos":[
+        
+    ]
 }
