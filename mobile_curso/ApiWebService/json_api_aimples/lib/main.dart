@@ -88,7 +88,7 @@ class _TarefasPageState extends State<TarefasPage>{
 
   //atualizar tarefa
   void _atualizarTarefa(String id, bool concluida) async{
-    final tarefaConcluida;
+    final tarefaConcluida
   }
 
   //build Tela
