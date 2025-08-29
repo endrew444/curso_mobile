@@ -1,34 +1,33 @@
-// classe para o controller dos usuário
-
-import 'package:biblioteca_app/models/Livro.dart';
+import 'package:biblioteca_app/models/livro.dart';
 import 'package:biblioteca_app/services/api_service.dart';
 
 class LivroController {
-  //métodos
-  //Get do usuário
-  Future<List<Livro>> fetchAll() async{
-    //pega a lista de Livro no formato List<dynamic>
+  // Buscar todos os livros
+  Future<List<Livro>> fetchAll() async {
     final list = await ApiService.getList("livros");
-    //retornar a Lista de Usuários Convertidas
-    return list.map((item)=>Livro.fromMap(item)).toList();
+    return list.map((item) => Livro.fromJson(item)).toList();
   }
-  //Get de um unico Usuário
-  Future<Livro> fetchOne(String id) async{
+
+  // Buscar um livro por ID
+  Future<Livro> fetchOne(String id) async {
     final livro = await ApiService.getOne("livros", id);
-    return Livro.fromMap(livro);
+    return Livro.fromJson(livro);
   }
-  //Post -> Criar um Novo usuário
-  Future<Livro> create(Livro  book) async{
-    final created = await ApiService.post("livros", book.toMap());
-    return Livro.fromMap(created);
+
+  // Criar um novo livro
+  Future<Livro> create(Livro book) async {
+    final created = await ApiService.post("livros", book.toJson());
+    return Livro.fromJson(created);
   }
-  //Put -> Alterar um Usuário
-  Future<Livro> update(Livro book) async{
-    final updated = await ApiService.put("livros", book.toMap(), book.id!);
-    return Livro.fromMap(updated);
+
+  // Atualizar um livro existente
+  Future<Livro> update(Livro book) async {
+    final updated = await ApiService.put("livros", book.toJson(), book.id);
+    return Livro.fromJson(updated);
   }
-  // Delete -> Deletar um Usuário
-  Future<void> delete(String id) async{
+
+  // Deletar um livro
+  Future<void> delete(String id) async {
     await ApiService.delete("livros", id);
   }
 }
