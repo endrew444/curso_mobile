@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:cinefavorite/views/favorite_view.dart';
 import 'package:cinefavorite/views/login_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -21,9 +19,10 @@ void main() async{
     ),
     home: AuthStream(),
   ));
-
 }
 
+
+//verifica se o usuario esta logado ou nao no sistema e direciona de acordo com a decisão
 class AuthStream extends StatelessWidget {
   const AuthStream({super.key});
 
