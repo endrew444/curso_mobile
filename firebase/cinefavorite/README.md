@@ -131,4 +131,4 @@ Determinar o Caminho Percorrido pelo ator pra executar uma Ação
 
 ## Prototipagem
 
-link
+link: https://www.figma.com/design/Z2wQH4iqIVXXBEQTVNs644/Untitled?node-id=0-1&t=aYuwG3p8kOphhvZt-1
