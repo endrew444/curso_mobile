@@ -19,9 +19,45 @@ class _MapViewState extends State<MapView> {
   bool _isLoading = false;
   String? _error;
 
+  // método para adiconar o ponto no mapa
+  void _adicionarPonto() async {
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+    try {
+      //pegar a localização atual
+      LocationPoints novaMarcacao = await _mapController.getcurrentLocation();
+      listaPosicoes.add(novaMarcacao);
+    } catch (e) {
+      _error = e.toString();
+      //mostro o erro
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(_error!)));
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      // adicionar pontos no mapa 
+      //( vai precisar da Bibloteca Flutter Map (flutter_map))
+      appBar: AppBar(
+        title: Text("Mapa de localização"),
+        actions: [
+          IconButton(
+            onPressed: _adicionarPonto, 
+            icon: _isLoading
+            ? CircularProgressIndicator()
+            : Icon(Icons.add_location))
+        ],
+      ),
+      // mapa na tela
+    );
   }
 }
