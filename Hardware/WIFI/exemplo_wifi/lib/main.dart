@@ -51,8 +51,10 @@ class _WifiStatusScreenState extends State<WifiStatusScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    //1. faz auma verificação inicial ao abrir a tela
     _checkInitialConnection();
 
+    //2. Começa a ouvir as mudanças de Status (Stream)
     _conexao = Connectivity().onConnectivityChanged.listen(
       (List<ConnectivityResult> results){
         final result = results.isNotEmpty ? results.first : ConnectivityResult.none;
@@ -60,7 +62,6 @@ class _WifiStatusScreenState extends State<WifiStatusScreen> {
       }
     );
   }
-
 
 
   @override
