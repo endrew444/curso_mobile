@@ -33,29 +33,18 @@ class _MyHomePageState extends State<MyHomePage> {
       body: controller.photos.isEmpty
           ? Center(child: Text('Nenhuma foto ainda'))
           : GridView.builder(
-              padding: EdgeInsets.all(8),
               itemCount: controller.photos.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.7,
-                crossAxisSpacing: 8,
-                mainAxisSpacing: 8,
+                crossAxisCount: 2, // ou 1, como preferir
               ),
               itemBuilder: (context, i) {
-                final photo = controller.photos[i];
-                print('Mostrando foto: ${photo.file.path}');
+                final photo = controller.photos[i]; 
                 return Card(
                   child: Column(
                     children: [
-                      Expanded(child: Image.file(photo.file, fit: BoxFit.cover)),
-                      Padding(
-                        padding: EdgeInsets.all(4),
-                        child: Text(photo.date, style: TextStyle(fontSize: 12)),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(4),
-                        child: Text(photo.coords, style: TextStyle(fontSize: 11)),
-                      ),
+                      Expanded(child: Image.file(photo.file)),
+                      Text(photo.date),
+                      Text(photo.coords),
                     ],
                   ),
                 );
