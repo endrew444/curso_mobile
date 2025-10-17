@@ -1,0 +1,39 @@
+name: sa_registro
+description: "Aplicativo de registro de ponto com autenticação via Firebase e biometria."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Ícones iOS
+  cupertino_icons: ^1.0.8
+
+  # Firebase Core
+
+  # Autenticação Firebase
+  firebase_auth: ^5.7.0
+
+  # Biometria
+  local_auth: ^3.0.0
+
+  # Provider
+  provider: ^6.1.5+1
+  cloud_firestore: ^5.6.12
+  geolocator: ^14.0.2
+  intl: ^0.20.2
+  flutter_map: ^8.2.2
+  firebase_core: ^3.15.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

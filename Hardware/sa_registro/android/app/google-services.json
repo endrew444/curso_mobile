@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "249960236869",
+    "project_id": "sa-registro-9dc70",
+    "storage_bucket": "sa-registro-9dc70.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249960236869:android:74670d01f639191789a02c",
+        "android_client_info": {
+          "package_name": "com.example.sa_registro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk-4VNysDwQ1LL9jxbQwpVrYmgBZA0fSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
