@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590224250317",
+    "project_id": "registro-ponto-356d6",
+    "storage_bucket": "registro-ponto-356d6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590224250317:android:0ff001633f3432852a2084",
+        "android_client_info": {
+          "package_name": "com.example.registro_ponto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkvs3_5IfZJfRZ3gdihEfdJmBBVQKzHEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
